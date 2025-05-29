@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static_staff/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Podkova&display=swap" rel="stylesheet">
+    <title>Dormitories</title>
+</head>
+<body>
+    <div class="header-application">
+        <div class="header__menu">
+            <nav class="header__navigation">
+                <div class="navigation-element">
+                    <a href="/staff/index.html" class="navigation__element-link">Головна</a>
+                </div>
+                <div class="navigation-element">
+                    <a href="/staff/applications.html" class="navigation__element-link">Заяви</a>
+                </div>
+                <div class="navigation-element">
+                    <a href="/staff/residents.html" class="navigation__element-link">Мешканці</a>
+                </div>
+            </nav>
+            <button class="menu__button">Вхід</button>
+        </div>
+    </div>
+    <div class="page-info">
+        <div class="page-info__title">
+            <h1>Подані заявки</h1>
+        </div>
+        <div class="page-info__content">
+            <table class="page-info__table" border='1' id="applications_table">
+                <thead>
+                <tr>
+                    <th>Номер заявки</th>
+                    <th>Ім'я</th>
+                    <th>По батькові</th>
+                    <th>Прізвище</th>
+                    <th>Дата народження</th>
+                    <th>Номер телефону</th>
+                    <th>Email</th>
+                    <th>Факультет</th>
+                    <th>Спеціальність</th>
+                    <th>Пільга</th>
+                    <th>Місто проживання</th>
+                    <th>Регіон проживання</th>
+                    <th>Домашня адреса</th>
+                    <th>Номер кампусу</th>
+                    <th>Номер вулиці</th>
+                    <th>Дії</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div id="acceptModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Прийняти заявку</h2>
+                <form id="accept_application_form" method="POST">
+                    <input type="hidden" id="application_id" name="application_id">
+                    <label for="dormitory">Назва Гуртожитку:</label>
+                    <select id="dormitory" name="dormitory" required>
+                        <option value="" disabled selected>Виберіть гуртожиток</option>
+                    </select>
+                    <label for="room_number">Номер кімнати:</label>
+                    <select id="room_number" name="room_number" required>
+                        <option value="" disabled selected>Виберіть кімнату</option>
+                    </select>
+                    <input type="hidden" id="lease_start_date" name="lease_start_date">
+                    <input type="hidden" id="lease_term" name="lease_term">
+                    <input type="hidden" id="lease_end_date" name="lease_end_date">
+                    <button type="submit">Підтвердити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static_staff/script/applications_table.js"></script>
+    <script src="/static_staff/script/applications_form.js"></script>
+</body>
+</html>

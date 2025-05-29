@@ -1,0 +1,9 @@
+{
+  "eslint.validate": ["javascript"],
+  "eslint.packageManager": "npm",
+  "eslint.run": "onType",
+  "eslint.debug": true,
+  "eslint.trace.server": "verbose",
+  "eslint.restart.enable": true,
+  "eslint.probe": ["javascript", "javascriptreact"]
+}

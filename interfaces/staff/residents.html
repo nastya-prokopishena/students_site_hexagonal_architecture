@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static_staff/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Podkova&display=swap" rel="stylesheet">
+    <title>Dormitories</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header__menu">
+            <nav class="header__navigation">
+                <div class="navigation-element">
+                    <a href="/staff/index.html" class="navigation__element-link">Головна</a>
+                </div>
+                <div class="navigation-element">
+                    <a href="/staff/applications.html" class="navigation__element-link">Заяви</a>
+                </div>
+                <div class="navigation-element">
+                    <a href="/staff/residents.html" class="navigation__element-link">Мешканці</a>
+                </div>
+            </nav>
+            <button class="menu__button">Вхід</button>
+        </div>
+    </div>
+    <div class="page-info">
+        <h1 class="page-info__title">Мешканці</h1>
+        <div class="page-info__content">
+            <form id="filterStudents">
+                <input type="text" id="lastName" placeholder="Прізвище">
+                <input type="text" id="firstName" placeholder="Ім'я">
+                <input type="text" id="middleName" placeholder="По-батькові">
+                <input type="text" id="date_of_birth" placeholder="Дата народження">
+                <select  id="dormitory" placeholder="Гуртожиток">
+                    <option value="item.id" disabled selected> Гуртожиток</option>
+                </select>
+                <select  id="room" placeholder="Кімната">
+                    <option value="item.id" disabled selected> Номер кімнати</option>
+                </select>
+        
+                <button type="submit">Пошук</button>
+            </form>
+        
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Прізвище</th>
+                        <th>Ім'я</th>
+                        <th>По-батькові</th>
+                        <th>Дата народження</th>
+                        <th>Гуртожиток</th>
+                        <th>Кімната</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/static_staff/script/residents_fiter.js"></script>
+</body>
+</html>
